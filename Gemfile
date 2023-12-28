@@ -76,7 +76,7 @@ gem 'pundit'
 # super admin
 gem 'administrate', '>= 0.19.0'
 gem 'administrate-field-active_storage'
-gem 'administrate-field-belongs_to_search'
+gem 'administrate-field-belongs_to_search', '>= 0.9.0'
 
 ##--- gems for pubsub service ---##
 # https://karolgalanciak.com/blog/2019/11/30/from-activerecord-callbacks-to-publish-slash-subscribe-pattern-and-event-driven-design/
