@@ -61,7 +61,7 @@ gem 'activerecord-import'
 ##--- gems for server & infra configuration ---##
 gem 'dotenv-rails'
 gem 'foreman'
-gem 'puma'
+gem 'puma', '>= 6.4.2'
 gem 'webpacker'
 # metrics on heroku
 gem 'barnes'
