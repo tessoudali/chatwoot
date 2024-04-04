@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 ruby '3.2.2'
 
 ##-- base gems for rails --##
-gem 'rack-cors', require: 'rack/cors'
-gem 'rails', '~> 7.0.8.0'
+gem 'rack-cors', '>= 2.0.2', require: 'rack/cors'
+gem 'rails', '~> 7.0.8.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
@@ -59,7 +59,7 @@ gem 'redis-namespace'
 gem 'activerecord-import'
 
 ##--- gems for server & infra configuration ---##
-gem 'dotenv-rails'
+gem 'dotenv-rails', '>= 3.0.0'
 gem 'foreman'
 gem 'puma'
 gem 'webpacker'
@@ -69,14 +69,14 @@ gem 'barnes'
 ##--- gems for authentication & authorization ---##
 gem 'devise', '>= 4.9.3'
 gem 'devise-secure_password', git: 'https://github.com/chatwoot/devise-secure_password', branch: 'chatwoot'
-gem 'devise_token_auth'
+gem 'devise_token_auth', '>= 1.2.2'
 # authorization
 gem 'jwt'
 gem 'pundit'
 # super admin
-gem 'administrate', '>= 0.19.0'
-gem 'administrate-field-active_storage'
-gem 'administrate-field-belongs_to_search'
+gem 'administrate', '>= 0.20.0'
+gem 'administrate-field-active_storage', '>= 1.0.0'
+gem 'administrate-field-belongs_to_search', '>= 0.9.0'
 
 ##--- gems for pubsub service ---##
 # https://karolgalanciak.com/blog/2019/11/30/from-activerecord-callbacks-to-publish-slash-subscribe-pattern-and-event-driven-design/
@@ -85,7 +85,7 @@ gem 'wisper', '2.0.0'
 ##--- gems for channels ---##
 gem 'facebook-messenger'
 gem 'line-bot-api'
-gem 'twilio-ruby', '~> 5.66'
+gem 'twilio-ruby', '~> 6.0', '>= 6.0.0'
 # twitty will handle subscription of twitter account events
 # gem 'twitty', git: 'https://github.com/chatwoot/twitty'
 gem 'twitty', '~> 0.1.5'
@@ -107,16 +107,16 @@ gem 'google-cloud-translate-v3'
 gem 'ddtrace', require: false
 gem 'elastic-apm', require: false
 gem 'newrelic_rpm', require: false
-gem 'newrelic-sidekiq-metrics', require: false
+gem 'newrelic-sidekiq-metrics', '>= 1.6.2', require: false
 gem 'scout_apm', require: false
-gem 'sentry-rails', '>= 5.12.0', require: false
+gem 'sentry-rails', '>= 5.13.0', require: false
 gem 'sentry-ruby', require: false
-gem 'sentry-sidekiq', '>= 5.12.0', require: false
+gem 'sentry-sidekiq', '>= 5.13.0', require: false
 
 ##-- background job processing --##
-gem 'sidekiq', '>= 7.1.3'
+gem 'sidekiq', '>= 7.2.0'
 # We want cron jobs
-gem 'sidekiq-cron', '>= 1.10.1'
+gem 'sidekiq-cron', '>= 1.11.0'
 
 ##-- Push notification service --##
 gem 'fcm'
@@ -159,11 +159,11 @@ gem 'lograge', '~> 0.14.0', require: false
 # worked with microsoft refresh token
 gem 'omniauth-oauth2'
 
-gem 'audited', '~> 5.4', '>= 5.4.0'
+gem 'audited', '~> 5.4', '>= 5.4.1'
 
 # need for google auth
-gem 'omniauth'
-gem 'omniauth-google-oauth2'
+gem 'omniauth', '>= 2.1.2'
+gem 'omniauth-google-oauth2', '>= 1.1.2'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 ## Gems for reponse bot
@@ -198,13 +198,13 @@ group :development do
   gem 'squasher'
 
   # profiling
-  gem 'rack-mini-profiler', '>= 3.1.1', require: false
+  gem 'rack-mini-profiler', '>= 3.2.0', require: false
   gem 'stackprof'
 end
 
 group :test do
   # Cypress in rails.
-  gem 'cypress-on-rails'
+  gem 'cypress-on-rails', '>= 1.14.0'
   # fast cleaning of database
   gem 'database_cleaner'
   # mock http calls
@@ -222,15 +222,15 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'climate_control'
   gem 'debug', '~> 1.8'
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 6.3.0'
   gem 'listen'
   gem 'mock_redis'
   gem 'pry-rails'
   gem 'rspec_junit_formatter'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 6.0.3'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop-rails', '>= 2.20.0', require: false
   gem 'rubocop-rspec', require: false
   gem 'seed_dump'
   gem 'shoulda-matchers'
