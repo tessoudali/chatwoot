@@ -4,7 +4,7 @@ ruby '3.2.2'
 
 ##-- base gems for rails --##
 gem 'rack-cors', require: 'rack/cors'
-gem 'rails', '~> 7.0.8.0'
+gem 'rails', '~> 7.0.8.3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
@@ -69,14 +69,14 @@ gem 'barnes'
 ##--- gems for authentication & authorization ---##
 gem 'devise', '>= 4.9.3'
 gem 'devise-secure_password', git: 'https://github.com/chatwoot/devise-secure_password', branch: 'chatwoot'
-gem 'devise_token_auth'
+gem 'devise_token_auth', '>= 1.2.2'
 # authorization
 gem 'jwt'
 gem 'pundit'
 # super admin
 gem 'administrate', '>= 0.19.0'
-gem 'administrate-field-active_storage'
-gem 'administrate-field-belongs_to_search'
+gem 'administrate-field-active_storage', '>= 1.0.0'
+gem 'administrate-field-belongs_to_search', '>= 0.9.0'
 
 ##--- gems for pubsub service ---##
 # https://karolgalanciak.com/blog/2019/11/30/from-activerecord-callbacks-to-publish-slash-subscribe-pattern-and-event-driven-design/
