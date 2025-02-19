@@ -159,7 +159,7 @@ gem 'lograge', '~> 0.14.0', require: false
 # worked with microsoft refresh token
 gem 'omniauth-oauth2'
 
-gem 'audited', '~> 5.4', '>= 5.4.0'
+gem 'audited', '~> 5.4', '>= 5.4.1'
 
 # need for google auth
 gem 'omniauth'
@@ -229,9 +229,9 @@ group :development, :test do
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
   gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop-performance', '>= 1.24.0', require: false
+  gem 'rubocop-rails', '>= 2.30.0', require: false
+  gem 'rubocop-rspec', '>= 3.5.0', require: false
   gem 'seed_dump'
   gem 'shoulda-matchers'
   gem 'simplecov', '0.17.1', require: false
