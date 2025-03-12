@@ -114,7 +114,7 @@ gem 'sentry-ruby', require: false
 gem 'sentry-sidekiq', '>= 5.12.0', require: false
 
 ##-- background job processing --##
-gem 'sidekiq', '>= 7.1.3'
+gem 'sidekiq', '>= 8.0.0'
 # We want cron jobs
 gem 'sidekiq-cron', '>= 1.10.1'
 
@@ -159,7 +159,7 @@ gem 'lograge', '~> 0.14.0', require: false
 # worked with microsoft refresh token
 gem 'omniauth-oauth2'
 
-gem 'audited', '~> 5.4', '>= 5.4.0'
+gem 'audited', '~> 5.4', '>= 5.4.1'
 
 # need for google auth
 gem 'omniauth'
