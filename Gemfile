@@ -4,12 +4,12 @@ ruby '3.2.2'
 
 ##-- base gems for rails --##
 gem 'rack-cors', require: 'rack/cors'
-gem 'rails', '~> 7.0.8.0'
+gem 'rails', '~> 7.1.5.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
 ##-- rails application helper gems --##
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', '>= 10.0.0'
 gem 'attr_extras'
 gem 'browser'
 gem 'hashie'
@@ -56,7 +56,7 @@ gem 'pg'
 gem 'redis'
 gem 'redis-namespace'
 # super fast record imports in bulk
-gem 'activerecord-import'
+gem 'activerecord-import', '>= 1.5.0'
 
 ##--- gems for server & infra configuration ---##
 gem 'dotenv-rails'
@@ -69,14 +69,14 @@ gem 'barnes'
 ##--- gems for authentication & authorization ---##
 gem 'devise', '>= 4.9.3'
 gem 'devise-secure_password', git: 'https://github.com/chatwoot/devise-secure_password', branch: 'chatwoot'
-gem 'devise_token_auth'
+gem 'devise_token_auth', '>= 1.2.3'
 # authorization
 gem 'jwt'
 gem 'pundit'
 # super admin
-gem 'administrate', '>= 0.19.0'
-gem 'administrate-field-active_storage'
-gem 'administrate-field-belongs_to_search'
+gem 'administrate', '>= 0.20.0'
+gem 'administrate-field-active_storage', '>= 1.0.0'
+gem 'administrate-field-belongs_to_search', '>= 0.9.0'
 
 ##--- gems for pubsub service ---##
 # https://karolgalanciak.com/blog/2019/11/30/from-activerecord-callbacks-to-publish-slash-subscribe-pattern-and-event-driven-design/
@@ -129,7 +129,7 @@ gem 'geocoder'
 gem 'maxminddb'
 
 # to create db triggers
-gem 'hairtrigger'
+gem 'hairtrigger', '>= 1.1.0'
 
 gem 'procore-sift'
 
@@ -144,7 +144,7 @@ gem 'html2text', git: 'https://github.com/chatwoot/html2text_ruby', branch: 'cha
 gem 'working_hours'
 
 # full text search for articles
-gem 'pg_search'
+gem 'pg_search', '>= 2.3.7'
 
 # Subscriptions, Billing
 gem 'stripe'
@@ -159,7 +159,7 @@ gem 'lograge', '~> 0.14.0', require: false
 # worked with microsoft refresh token
 gem 'omniauth-oauth2'
 
-gem 'audited', '~> 5.4', '>= 5.4.0'
+gem 'audited', '~> 5.4', '>= 5.4.1'
 
 # need for google auth
 gem 'omniauth'
@@ -168,7 +168,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 ## Gems for reponse bot
 # adds cosine similarity to postgres using vector extension
-gem 'neighbor'
+gem 'neighbor', '>= 0.3.0'
 gem 'pgvector'
 # Convert Website HTML to Markdown
 gem 'reverse_markdown'
@@ -206,7 +206,7 @@ group :test do
   # Cypress in rails.
   gem 'cypress-on-rails'
   # fast cleaning of database
-  gem 'database_cleaner'
+  gem 'database_cleaner', '>= 2.1.0'
   # mock http calls
   gem 'webmock'
   # test profiling
