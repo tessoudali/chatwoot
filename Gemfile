@@ -47,7 +47,7 @@ gem 'aws-sdk-s3', require: false
 # original gem isn't maintained actively
 # we wanted updated version of faraday which is a dependency for slack-ruby-client
 gem 'azure-storage-blob', git: 'https://github.com/chatwoot/azure-storage-ruby', branch: 'chatwoot', require: false
-gem 'google-cloud-storage', require: false
+gem 'google-cloud-storage', '>= 1.45.0', require: false
 gem 'image_processing'
 
 ##-- gems for database --#
@@ -85,21 +85,21 @@ gem 'wisper', '2.0.0'
 ##--- gems for channels ---##
 gem 'facebook-messenger'
 gem 'line-bot-api'
-gem 'twilio-ruby', '~> 5.66'
+gem 'twilio-ruby', '~> 6.0', '>= 6.0.0'
 # twitty will handle subscription of twitter account events
 # gem 'twitty', git: 'https://github.com/chatwoot/twitty'
 gem 'twitty', '~> 0.1.5'
 # facebook client
-gem 'koala'
+gem 'koala', '>= 3.5.0'
 # slack client
-gem 'slack-ruby-client', '~> 2.2.0'
+gem 'slack-ruby-client', '~> 2.3.0'
 # for dialogflow integrations
-gem 'google-cloud-dialogflow-v2'
+gem 'google-cloud-dialogflow-v2', '>= 0.24.0'
 gem 'grpc'
 # Translate integrations
 # 'google-cloud-translate' gem depends on faraday 2.0 version
 # this dependency breaks the slack-ruby-client gem
-gem 'google-cloud-translate-v3'
+gem 'google-cloud-translate-v3', '>= 0.7.0'
 
 ##-- apm and error monitoring ---#
 # loaded only when environment variables are set.
@@ -119,7 +119,7 @@ gem 'sidekiq', '>= 7.1.3'
 gem 'sidekiq-cron', '>= 1.10.1'
 
 ##-- Push notification service --##
-gem 'fcm'
+gem 'fcm', '>= 2.0.0'
 gem 'web-push'
 
 ##-- geocoding / parse location from ip --##
@@ -157,13 +157,13 @@ gem 'faker'
 gem 'lograge', '~> 0.14.0', require: false
 
 # worked with microsoft refresh token
-gem 'omniauth-oauth2'
+gem 'omniauth-oauth2', '>= 1.9.0'
 
 gem 'audited', '~> 5.4', '>= 5.4.0'
 
 # need for google auth
 gem 'omniauth'
-gem 'omniauth-google-oauth2'
+gem 'omniauth-google-oauth2', '>= 1.1.2'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 ## Gems for reponse bot
